@@ -6,8 +6,8 @@
 
 .question {
   --correct-color: rgb(9, 187, 69);
-  --incorrect-color: rgb(252, 206, 0);
-  --selected-color: rgba(255, 0, 0, 0.712);
+  --incorrect-color: rgb(252, 0, 0);
+  --selected-color: rgba(255, 0, 106, 0.712);
   --disabled-color: rgb(219, 219, 219);
   --disabled-correct-color: rgb(118, 212, 149);
   --disabled-incorrect-color: rgb(221, 131, 131);
@@ -112,10 +112,6 @@
   color: var(--incorrect-color);
 }
 
-/*
-  style.css
-*/
-
 #app-container {
   position: absolute;
   top: 50;
@@ -164,8 +160,8 @@
 }
 
 body {
-  background-image: url("./Image, Vidéo/background.jpg");
-  background-size: 120%;
+  background-image: url("./Image, Vidéo/fond.png");
+  background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Avenir";

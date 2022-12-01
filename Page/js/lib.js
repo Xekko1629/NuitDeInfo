@@ -1,15 +1,14 @@
-//
-// lib/lib.js
-//
 var Question = function (questionObj) {
     this.value = {
       text: "Question",
-      answers: []
+      answers: [],
+      expl_txt: "expl_txt"
     };
   
     this.selectedAnswer = null;
     this.html = null;
     this.questionText = null;
+    this.questionExpl_txt = null;
     this.questionAnswers = null;
     this.questionFeedback = null;
   
@@ -38,6 +37,8 @@ var Question = function (questionObj) {
   
       this.questionText = document.createElement("h2");
       this.questionText.textContent = this.value.text;
+      this.questionExpl_txt = document.createElement("h3");
+      this.questionExpl_txt.textContent = this.value.expl_txt;
   
       this.questionAnswers = document.createElement("div");
       this.questionAnswers.classList.add("answers");
@@ -111,7 +112,7 @@ var Question = function (questionObj) {
       this.html = this.html || document.createElement("div");
   
       correctFeedback = "Tu as eu juste !";
-      incorrectFeedback = "Pas la bonne réponse !";
+      incorrectFeedback = `Pas la bonne réponse !<br> ${this.questionExpl_txt.textContent}`;
   
       if (this.selectedAnswer !== null) {
         if (this.selectedAnswer.value.isCorrect) {
@@ -143,13 +144,9 @@ var Question = function (questionObj) {
     }
   };
   
-  //
-  // main.js
-  //
-  
   let questionsData = [
     {
-      text: "Channel name",
+      text: "Le VIH et le sida, c’est la même chose.",
       answers: [
         {
           text: "Vrai",
@@ -162,7 +159,7 @@ var Question = function (questionObj) {
       ]
     },
     {
-      text: "Channel name",
+      text: "Les moustiques peuvent transmettre le VIH.",
       answers: [
         {
           text: "Vrai",
@@ -175,7 +172,20 @@ var Question = function (questionObj) {
       ]
     },
     {
-      text: "Channel name",
+      text: "Embrasser une personne séropositive est sans danger.",
+      answers: [
+        {
+          text: "Vrai",
+          isCorrect: true
+        },
+        {
+          text: "False",
+          isCorrect: false,
+        }
+      ]
+    },
+    {
+      text: "La transpiration d’une personne séropositive peut transmettre le VIH.",
       answers: [
         {
           text: "Vrai",
@@ -188,7 +198,7 @@ var Question = function (questionObj) {
       ]
     },
     {
-      text: "Channel name",
+      text: "Faire l’amour avec une personne séropositive sous traitement est risqué.",
       answers: [
         {
           text: "Vrai",
@@ -201,7 +211,20 @@ var Question = function (questionObj) {
       ]
     },
     {
-      text: "Channel name",
+      text: "On peut attraper le VIH pendant le sexe oral.",
+      answers: [
+        {
+          text: "Vrai",
+          isCorrect: true
+        },
+        {
+          text: "False",
+          isCorrect: false
+        }
+      ]
+    },
+    {
+      text: "Une personne séropositive ne peut pas avoir d’enfants.",
       answers: [
         {
           text: "Vrai",
@@ -214,7 +237,7 @@ var Question = function (questionObj) {
       ]
     },
     {
-      text: "Channel name",
+      text: "On peut attraper le VIH même en utilisant un préservatif.",
       answers: [
         {
           text: "Vrai",
@@ -227,7 +250,7 @@ var Question = function (questionObj) {
       ]
     },
     {
-      text: "Channel name",
+      text: "On ne peut pas guérir du Sida.",
       answers: [
         {
           text: "Vrai",
@@ -240,7 +263,7 @@ var Question = function (questionObj) {
       ]
     },
     {
-      text: "Channel name",
+      text: "Une femme séropositive peut transmettre le sida à son enfant.",
       answers: [
         {
           text: "Vrai",
@@ -253,32 +276,40 @@ var Question = function (questionObj) {
       ]
     },
     {
-      text: "Channel name",
+      text: "Le préservatif est le seul moyen de se protéger contre le VIH et les autres IST.",
       answers: [
         {
           text: "Vrai",
-          isCorrect: false
+          isCorrect: true
         },
         {
           text: "False",
+          isCorrect: false
+        }
+      ]
+    },
+    {
+      text: "Je peux voir plusieurs infections sexuellement transmissibles à la fois ?",
+      answers: [
+        {
+          text: "Vrai",
           isCorrect: true
+        },
+        {
+          text: "False",
+          isCorrect: false
         }
       ]
     }
   ];
   
-  // variables initialization
   let questions = [];
   let score = 0,
     answeredQuestions = 0;
   let appContainer = document.getElementById("questions-container");
   let scoreContainer = document.getElementById("score-container");
   scoreContainer.innerHTML = `Score: ${score}/${questionsData.length}`;
-  
-  /**
-   * Shuffles array in place. ES6 version
-   * @param {Array} arr items An array containing the items.
-   */
+
   function shuffle(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -288,11 +319,11 @@ var Question = function (questionObj) {
   
   shuffle(questionsData);
   
-  // creating questions
   for (var i = 0; i < questionsData.length; i++) {
     let question = new Question({
       text: questionsData[i].text,
-      answers: questionsData[i].answers
+      answers: questionsData[i].answers,
+      expl_txt: questionsData[i].expl_txt
     });
   
     appContainer.appendChild(question.create());
@@ -310,9 +341,13 @@ var Question = function (questionObj) {
   
     if (answeredQuestions == questions.length) {
       setTimeout(function () {
-        alert(`Quiz completed! \nFinal score: ${score}/${questions.length}`);
+        var val = confirm(`Vous avez terminé le quiz ! \nScore Final: ${score}/${questions.length}`);
+        if (val == true) {
+          document.location.href='https://google.com'
+        } else if (val == false) {
+          document.location.reload()
+        }
       }, 100);
+  
     }
   });
-  
-  console.log(questions, questionsData);
