@@ -1,3 +1,10 @@
+/*
+** EPITECH PROJECT, 2022
+** NuitDeInfo
+** File description:
+** lib.js
+*/
+
 var Question = function (questionObj) {
     this.value = {
       text: "Question",
