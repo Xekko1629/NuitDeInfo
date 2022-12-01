@@ -1,0 +1,100 @@
+
+@font-face {
+    font-family: "OwFont";
+    src: url('./font/big_noodle_titling.ttf');
+}
+
+body {
+    background-image: url("./Image, Vidéo/background.jpg");
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Avenir";
+
+}
+
+nav {
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    font-family: "OwFont";
+}
+
+.mdl-button {
+    font-family: "OwFont";
+    font-size: 2em;
+    margin: 0.5em;
+}
+
+.mdl-menu__item {
+    font-size: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+}
+
+
+.material-icons {
+    padding-right: 0.5em;
+    vertical-align: middle
+}
+
+.mdl-tooltip{
+    font-family: "Avenir";
+}
+
+div{
+
+}
+#game {
+    float: bottom;
+    text-shadow: #000000 0.03em 0.03em, #000000 -0.03em 0.03em, #000000 -0.03em -0.03em, #000000 0.03em -0.03em;
+    color: black;
+    font-size: 8rem;
+    font-family: Calibri;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+p {
+    font-size: 2rem;
+
+    
+}
+p {
+    margin-top: 70px;
+    font-size: 25px;
+    margin-bottom: 225px;
+}
+
+hr{
+    border: none;
+    background-color: #0a0a0c;
+    height: 5px;
+    width: 80%;
+    margin-left: 10%;
+}
+img{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    float: left;
+}
+a{
+    text-decoration: none;
+}
+
+#yow {
+    font-family: Calibri;
+    outline: 10px solid #0a0a0c;
+    color: white;
+    font-size: 2rem;
+    background-color: #faf9f7;
+    color: #0a0a0c;
+    margin: 3rem;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 0.5em;
+    padding-bottom: 200%;
+
+}

@@ -1,0 +1,76 @@
+@font-face {
+    font-family: "OwFont";
+    src: url('./font/big_noodle_titling.ttf');
+}
+
+body {
+    background-image: url("./Image, Vidéo/OWPrés.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Avenir";
+
+}
+
+nav {
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    font-family: "OwFont";
+}
+
+.mdl-button {
+    font-family: "OwFont";
+    font-size: 2em;
+    margin: 0.5em;
+}
+
+.mdl-menu__item {
+    font-size: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+}
+
+
+.material-icons {
+    padding-right: 0.5em;
+    vertical-align: middle
+}
+
+.mdl-tooltip{
+    font-family: "Avenir";
+}
+video{
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    
+}
+p {
+    text-indent: 2em;
+    text-align: justify;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.589);
+    margin: 3rem;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    padding: 0.5em;
+    line-height: 1.2em;
+}
+p2{
+    text-indent: 2em;
+    text-align: justify;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.589);
+    margin:35rem;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    padding: 0.5em;
+    line-height: 1.2em;
+}
