@@ -1,17 +1,10 @@
-/*
-** EPITECH PROJECT, 2022
-** NuitDeInfo
-** File description:
-** StyleIndex.css
-*/
-
 @font-face {
     font-family: "OwFont";
     src: url('./font/big_noodle_titling.ttf');
 }
 
 body {
-    background-image: url("./Image, Vidéo/background.jpg");
+    background-image: url("./Image, Video/background.jpg");
     background-size: 120%;
     background-repeat: no-repeat;
     background-attachment: fixed;

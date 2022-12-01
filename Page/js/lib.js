@@ -261,11 +261,11 @@ var Question = function (questionObj) {
       answers: [
         {
           text: "Vrai",
-          isCorrect: false
+          isCorrect: true
         },
         {
           text: "False",
-          isCorrect: true
+          isCorrect: false
         }
       ]
     },
@@ -274,11 +274,11 @@ var Question = function (questionObj) {
       answers: [
         {
           text: "Vrai",
-          isCorrect: false
+          isCorrect: true
         },
         {
           text: "False",
-          isCorrect: true
+          isCorrect: false
         }
       ]
     },
