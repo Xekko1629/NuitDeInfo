@@ -350,7 +350,7 @@ var Question = function (questionObj) {
       setTimeout(function () {
         var val = confirm(`Vous avez terminé le quiz ! \nScore Final: ${score}/${questions.length}`);
         if (val == true) {
-          document.location.href='https://google.com'
+          document.location.href='../index.html'
         } else if (val == false) {
           document.location.reload()
         }
