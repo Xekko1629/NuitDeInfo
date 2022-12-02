@@ -160,7 +160,7 @@ var Question = function (questionObj) {
           isCorrect: false
         },
         {
-          text: "False",
+          text: "Faux",
           isCorrect: true
         }
       ]
@@ -173,7 +173,7 @@ var Question = function (questionObj) {
           isCorrect: false
         },
         {
-          text: "False",
+          text: "Faux",
           isCorrect: true
         }
       ]
@@ -186,7 +186,7 @@ var Question = function (questionObj) {
           isCorrect: true
         },
         {
-          text: "False",
+          text: "Faux",
           isCorrect: false,
         }
       ]
@@ -199,7 +199,7 @@ var Question = function (questionObj) {
           isCorrect: false
         },
         {
-          text: "False",
+          text: "Faux",
           isCorrect: true
         }
       ]
@@ -212,7 +212,7 @@ var Question = function (questionObj) {
           isCorrect: false
         },
         {
-          text: "False",
+          text: "Faux",
           isCorrect: true
         }
       ]
@@ -225,7 +225,7 @@ var Question = function (questionObj) {
           isCorrect: true
         },
         {
-          text: "False",
+          text: "Faux",
           isCorrect: false
         }
       ]
@@ -238,7 +238,7 @@ var Question = function (questionObj) {
           isCorrect: false
         },
         {
-          text: "False",
+          text: "Faux",
           isCorrect: true
         }
       ]
@@ -251,7 +251,7 @@ var Question = function (questionObj) {
           isCorrect: false
         },
         {
-          text: "False",
+          text: "Faux",
           isCorrect: true
         }
       ]
@@ -264,7 +264,7 @@ var Question = function (questionObj) {
           isCorrect: true
         },
         {
-          text: "False",
+          text: "Faux",
           isCorrect: false
         }
       ]
@@ -277,7 +277,7 @@ var Question = function (questionObj) {
           isCorrect: true
         },
         {
-          text: "False",
+          text: "Faux",
           isCorrect: false
         }
       ]
@@ -290,20 +290,20 @@ var Question = function (questionObj) {
           isCorrect: true
         },
         {
-          text: "False",
+          text: "Faux",
           isCorrect: false
         }
       ]
     },
     {
-      text: "Je peux voir plusieurs infections sexuellement transmissibles à la fois ?",
+      text: "Je peux avoir plusieurs infections sexuellement transmissibles à la fois ?",
       answers: [
         {
           text: "Vrai",
           isCorrect: true
         },
         {
-          text: "False",
+          text: "Faux",
           isCorrect: false
         }
       ]
